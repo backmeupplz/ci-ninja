@@ -20,8 +20,7 @@ app.post('/', (req, res) => {
     '204.232.175.75',
     '108.171.174.178'
   ];
-  const payload = req.body;
-  console.log(payload);
+  const payload = JSON.parse(req.body.payload);
 
   if (!payload) {
     console.log('No payload');
@@ -41,6 +40,7 @@ app.post('/', (req, res) => {
   if (payload.ref === 'master' ||
     payload.ref === 'refs/heads/master' ||
     payload.ref === 'refs/heads/develop') {
+    console.log('Executing task!');
     myExec('./github.sh');
   }
 
