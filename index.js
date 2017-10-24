@@ -21,6 +21,7 @@ app.post('/', (req, res) => {
     '108.171.174.178'
   ];
   const payload = req.body;
+  console.log(payload);
 
   if (!payload) {
     console.log('No payload');
