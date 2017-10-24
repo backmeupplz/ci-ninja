@@ -3,23 +3,24 @@ const path = require('path');
 const http = require('http');
 const app = express();
 const bodyParser = require('body-parser');
+const Netmask = require('netmask').Netmask
 
 app.set('port', 61440);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/', (req, res) => {
-  var authorizedIps = [
+  const authorizedIps = [
     '127.0.0.1',
     'localhost'
   ];
-  var githubIps = [
+  const githubIps = [
     '207.97.227.253',
     '50.57.128.197',
     '204.232.175.75',
     '108.171.174.178'
   ];
-  var payload = req.body;
+  const payload = req.body;
 
   if (!payload) {
     console.log('No payload');
@@ -28,7 +29,7 @@ app.post('/', (req, res) => {
     return;
   }
 
-  var ipv4 = req.ip.replace('::ffff:', '')
+  const ipv4 = req.ip.replace('::ffff:', '')
   if (!(inAuthorizedSubnet(ipv4) || authorizedIps.indexOf(ipv4) >= 0 || githubIps.indexOf(ipv4) >= 0)) {
     console.log('Unauthorized IP:', req.ip, '(', ipv4, ')');
     res.writeHead(403);
@@ -51,8 +52,8 @@ http.createServer(app).listen(app.get('port'), function () {
 });
 
 function myExec(line) {
-  var exec = require('child_process').exec;
-  var execCallback = (error) => {
+  const exec = require('child_process').exec;
+  const execCallback = (error) => {
     if (error !== null) {
       console.log('exec error: ' + error);
     }
@@ -61,7 +62,7 @@ function myExec(line) {
 }
 
 function inAuthorizedSubnet(ip) {
-  var authorizedSubnet = [
+  const authorizedSubnet = [
     '204.232.175.64/27',
     '192.30.252.0/22'
   ].map(function (subnet) {
