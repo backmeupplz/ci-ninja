@@ -59,3 +59,15 @@ function myExec(line) {
   }
   exec(line, execCallback);
 }
+
+function inAuthorizedSubnet(ip) {
+  var authorizedSubnet = [
+    '204.232.175.64/27',
+    '192.30.252.0/22'
+  ].map(function (subnet) {
+    return new Netmask(subnet)
+  })
+  return authorizedSubnet.some(function (subnet) {
+    return subnet.contains(ip)
+  })
+}
