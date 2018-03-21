@@ -40,6 +40,7 @@ app.post('/', (req, res) => {
   if (!payload.ref) {
     res.writeHead(200)
     res.end()
+    return
   }
   const scriptPath = `./scripts/${payload.repository.name}-${payload.ref.split('/').pop()}.sh`
   console.log(`Executing task at: ${scriptPath}`)
