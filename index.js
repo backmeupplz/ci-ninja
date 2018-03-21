@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const Netmask = require('netmask').Netmask
 const fs = require('fs')
 
-app.set('port', 61440)
+app.set('port', 61439)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
