@@ -3,8 +3,8 @@ CI service written in node, inspired by [node-cd](https://github.com/A21z/node-c
 
 # Usage
 1. `git clone https://github.com/A21z/node-cd` on the server
-2. Add scripts with the name like `master-{repository-name}.sh` to `scripts`
-3. Make sure the files are executable (like `sudo chmod 777 master-memcoin.sh`)
+2. Add scripts with the name like `{repository-name}-master.sh` to `scripts`
+3. Make sure the files are executable (like `sudo chmod +x {repository-name}-master.sh`)
 4. Add Webhook from your GitHub repository to `http://{server-ip}:61439/`
 
 Aaaaand you're done.
