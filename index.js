@@ -41,7 +41,7 @@ app.post('/', (req, res) => {
   }
 
   const ipv4 = req.ip.replace('::ffff:', '')
-  if (!(inAuthorizedSubnet(ipv4) || authorizedIps.indexOf(ipv4) >= 0 || githubIps.indexOf(ipv4) >= 0)) {
+  if (!(inAuthorizedSubnet(ipv4) || authorizedIps.indexOf(ipv4) >= 0 || githubIps.indexOf(ipv4) >= 0 || ipv4.indexOf('140.82.115') >= 0)) {
     console.log('Unauthorized IP:', req.ip, '(', ipv4, ')')
     res.writeHead(403)
     res.end()
