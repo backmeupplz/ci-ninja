@@ -29,6 +29,7 @@ app.post('/', (req, res) => {
     '140.82.115.5',
     '140.82.115.64',
     '140.82.115.71',
+    '140.82.115.70',
   ]
   const payload = JSON.parse(req.body.payload)
 
