@@ -78,8 +78,10 @@ function myExec(line) {
 
 function inAuthorizedSubnet(ip) {
   const authorizedSubnet = [
-    '204.232.175.64/27',
-    '192.30.252.0/22'
+    '192.30.252.0/22',
+    '185.199.108.0/22',
+    '140.82.112.0/20',
+    '143.55.64.0/20'
   ].map(function (subnet) {
     return new Netmask(subnet)
   })
