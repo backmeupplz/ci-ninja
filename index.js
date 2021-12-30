@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
     '204.232.175.75',
     '108.171.174.178'
   ]
-  const payload = req.body
+  const payload = JSON.parse(req.body)
 
   if (!payload) {
     console.log('No payload')
