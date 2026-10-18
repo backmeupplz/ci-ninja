@@ -192,10 +192,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"forwarded@npm:~0.1.2":
-  version: 0.1.2
-  resolution: "forwarded@npm:0.1.2"
-  checksum: 54695c574292f9bc6bfa52111844337bc2e61cfcc5ec82f16b816d721a67a0c76b4849a34b57e38e51d64ddbb81aef974f393579f610ed1b990470e75abad2e0
+"forwarded@npm:0.2.0":
+  version: 0.2.0
+  resolution: "forwarded@npm:0.2.0"
+  checksum: fd27e2394d8887ebd16a66ffc889dc983fbbd797d5d3f01087c020283c0f019a7d05ee85669383d8e0d216b116d720fc0cef2f6e9b7eb9f4c90c6e0bc7fd28e6
   languageName: node
   linkType: hard
 
@@ -255,10 +255,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ipaddr.js@npm:1.9.0":
-  version: 1.9.0
-  resolution: "ipaddr.js@npm:1.9.0"
-  checksum: 56254f753959132884d74355fc45fda74f120283695c831a07bfac3368965bc9452cbdb80d5e38a6211de4e98a32ddbcd2e640137eb3f79a251c5c725a9efbd6
+"ipaddr.js@npm:1.9.1":
+  version: 1.9.1
+  resolution: "ipaddr.js@npm:1.9.1"
+  checksum: f88d3825981486f5a1942414c8d77dd6674dd71c065adcfa46f578d677edcb99fda25af42675cb59db492fdf427b34a5abfcde3982da11a8fd83a500b41cfe77
   languageName: node
   linkType: hard
 
@@ -360,12 +360,12 @@ __metadata:
   linkType: hard
 
 "proxy-addr@npm:~2.0.5":
-  version: 2.0.5
-  resolution: "proxy-addr@npm:2.0.5"
+  version: 2.0.8
+  resolution: "proxy-addr@npm:2.0.8"
   dependencies:
-    forwarded: ~0.1.2
-    ipaddr.js: 1.9.0
-  checksum: 463ec49bbe9833480c4e50cad7ebad9982db94982a27582412224e405854202f1559b748f6cd0b77576e0b7c8bd27e3bbfad99a615b71f3e218c587827a0adef
+    forwarded: 0.2.0
+    ipaddr.js: 1.9.1
+  checksum: 1878fa24a104ac3833f55583918964fbdcc6eedc076450548633dc1b4321e89947a9e93fc61d0c931712d3c46197de18855bc96a4feb73ba7bd4890a45508649
   languageName: node
   linkType: hard
 
